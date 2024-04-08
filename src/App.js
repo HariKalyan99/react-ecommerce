@@ -10,6 +10,10 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
+
+import ProductDetailsPage from './pages/ProductDetailsPage';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +29,20 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />,
+  }
+  ,
+  {
+    path: "/cart",
+    element: <CartPage />,
+  }
+  ,
+  {
+    path: "/checkout",
+    element: <CheckoutPage />,
+  },
+  {
+    path: "/product-details",
+    element: <ProductDetailsPage />,
   },
 ]);
 
