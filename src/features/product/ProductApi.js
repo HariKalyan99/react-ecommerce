@@ -40,3 +40,27 @@ export function fetchProductsByFilter(filter, sort, pagination) {
     resolve({ data: { products: data, totalItems: 100 } });
   });
 }
+
+export function fetchAllBrands() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8081/brands");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function fetchAllCategories() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8081/categories");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function fetchProductsById(id) {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8081/products/" + id);
+    const data = await response.json();
+    resolve({ data });
+  });
+}
